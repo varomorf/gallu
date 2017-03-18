@@ -1,0 +1,22 @@
+{
+  "shot_name": "Gallu",
+  "name": "Gallu - The Objective Tracking App",
+  "icons": [
+    {
+      "src": "/assets/icons/rooster-48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/assets/icons/rooster-96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/assets/icons/rooster-128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    }
+  ],
+  "start_url": "index.html"
+}
