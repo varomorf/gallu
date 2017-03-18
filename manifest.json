@@ -1,6 +1,8 @@
 {
   "short_name": "Gallu",
   "name": "Gallu - The Objective Tracking App",
+  "start_url": "index.html",
+  "background_color": "#FDF9D4",
   "icons": [
     {
       "src": "./assets/icons/rooster-48.png",
@@ -27,6 +29,5 @@
       "type": "image/png",
       "sizes": "192x192"
     }
-  ],
-  "start_url": "index.html"
+  ]
 }
