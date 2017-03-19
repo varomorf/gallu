@@ -1,6 +1,7 @@
 {
   "short_name": "Gallu",
   "name": "Gallu - The Objective Tracking App",
+  "description": "An app to keep track of your life objectives and not losing your focus.",
   "start_url": "index.html",
   "background_color": "#FDF9D4",
   "theme_color": "#FDF9D4",
