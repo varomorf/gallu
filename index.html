@@ -20,29 +20,7 @@
 <script src="./js/vendor/react.min.js"></script>
 <script src="./js/vendor/react-dom.min.js"></script>
 <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-<script type="text/babel">
-    var Counter = React.createClass({
-        getInitialState: function () {
-            return { count: 0 };
-        },
-        handleClick: function () {
-            this.setState({
-                count: this.state.count + 1,
-            });
-        },
-        render: function () {
-            return (
-                    <button onClick={this.handleClick}>
-                        Click me! Number of clicks: {this.state.count}
-                    </button>
-            );
-        }
-    });
-    ReactDOM.render(
-            <Counter />,
-            document.getElementById('container')
-    );
-</script>
+<script type="text/babel" src="js/ObjectivesList.js"></script>
 <script src="./js/main.js"></script>
 </body>
 </html>
