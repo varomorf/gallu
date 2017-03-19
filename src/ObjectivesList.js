@@ -2,6 +2,9 @@
  * Created by Alvaro on 19/03/2017.
  */
 
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 class ObjectivesList extends React.Component{
   constructor(props) {
     super(props);
