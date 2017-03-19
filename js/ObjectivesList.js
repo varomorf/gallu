@@ -2,24 +2,22 @@
  * Created by Alvaro on 19/03/2017.
  */
 
-var Counter = React.createClass({
+var ObjectivesList = React.createClass({
   getInitialState: function () {
-    return { count: 0 };
-  },
-  handleClick: function () {
-    this.setState({
-      count: this.state.count + 1,
-    });
+    return { objectives: [] };
   },
   render: function () {
     return (
-      <button onClick={this.handleClick}>
-    Click me! Number of clicks: {this.state.count}
-    </button>
+      <ul className="objectivesList">
+        <li className="objectivesList-objectiveEntry">Objective one</li>
+        <li className="objectivesList-objectiveEntry">Objective two</li>
+        <li className="objectivesList-objectiveEntry">Objective three</li>
+        <li className="objectivesList-objectiveEntry">Objective four</li>
+      </ul>
     );
   }
 });
 ReactDOM.render(
-<Counter />,
-  document.getElementById('container')
+<ObjectivesList />,
+  document.getElementById('objectivesContainer')
 );
