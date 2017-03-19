@@ -3,17 +3,19 @@
  */
 
 // use a cacheName for cache versioning
-var cacheName = 'v1:static';
+var CACHE_NAME = 'static-v1';
+var urlsToCache = [
+  './',
+  './js/main.js'
+];
 
 // during the install phase you usually want to cache static assets
-self.addEventListener('install', function(e) {
+self.addEventListener('install', function(event) {
   // once the SW is installed, go ahead and fetch the resources to make this work offline
-  e.waitUntil(
-    caches.open(cacheName).then(function(cache) {
-      return cache.addAll([
-        './',
-        './js/main.js'
-      ]).then(function() {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then(function(cache) {
+      console.log('Opening cache for ' + CACHE_NAME);
+      return cache.addAll(urlsToCache).then(function() {
         self.skipWaiting();
       });
     })
