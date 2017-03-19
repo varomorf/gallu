@@ -3,10 +3,13 @@
  */
 
 // use a cacheName for cache versioning
-var CACHE_NAME = 'static-v1';
+var CACHE_NAME = 'static-v0.0.1';
 var urlsToCache = [
   './',
-  './js/main.js'
+  './js/main.js',
+  './js/build/ObjectivesList.js',
+  './js/vendor/react.min.js',
+  './js/vendor/react-com.min.js'
 ];
 
 // during the install phase you usually want to cache static assets
