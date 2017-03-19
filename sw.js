@@ -9,7 +9,7 @@ var urlsToCache = [
   './js/main.js',
   './js/build/ObjectivesList.js',
   './js/vendor/react.min.js',
-  './js/vendor/react-com.min.js'
+  './js/vendor/react-dom.min.js'
 ];
 
 // during the install phase you usually want to cache static assets
