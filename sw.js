@@ -7,9 +7,7 @@ var CACHE_NAME = 'static-v0.0.1';
 var urlsToCache = [
   './',
   './js/main.js',
-  './js/build/ObjectivesList.js',
-  './js/vendor/react.min.js',
-  './js/vendor/react-dom.min.js'
+  './js/build/bundle.js'
 ];
 
 // during the install phase you usually want to cache static assets
