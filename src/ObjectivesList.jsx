@@ -6,17 +6,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 class ObjectivesList extends React.Component{
+
+
   constructor(props) {
     super(props);
+
+    this.state = {
+      objectives: []
+    };
 
     // Get a reference to the database service
     var database = firebase.database();
 
-    database.ref('objectives').once('value').then(function (snapshot) {
-      this.state = {
-        objectives: snapshot.val().objectives
-      };
-    });
+    database.ref('objectives').once('value').then(snapshot => {
+        this.state = {
+          objectives: snapshot.val()
+        };
+      }
+    );
 
   }
   getObjectives() {
