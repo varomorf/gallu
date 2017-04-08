@@ -8,9 +8,16 @@ import ReactDOM from 'react-dom';
 class ObjectivesList extends React.Component{
   constructor(props) {
     super(props);
-    this.state = {
-      objectives: ['Objective one', 'Objective two', 'Objective three', 'Objective four']
-    };
+
+    // Get a reference to the database service
+    var database = firebase.database();
+
+    database.ref('objectives').once('value').then(function (snapshot) {
+      this.state = {
+        objectives: snapshot.val().objectives
+      };
+    });
+
   }
   getObjectives() {
     return this.state.objectives.map((objective) =>
