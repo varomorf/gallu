@@ -3,7 +3,6 @@
  */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 var database = firebase.database();
 
@@ -42,7 +41,4 @@ class ObjectivesList extends React.Component{
 
 }
 
-ReactDOM.render(
-<ObjectivesList />,
-  document.getElementById('objectivesContainer')
-);
+export default ObjectivesList;

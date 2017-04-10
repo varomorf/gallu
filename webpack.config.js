@@ -5,7 +5,7 @@ var BUILD_DIR = path.resolve(__dirname, 'js/build');
 var APP_DIR = path.resolve(__dirname, 'src');
 
 var config = {
-  entry: APP_DIR + '/ObjectivesList.jsx',
+  entry: APP_DIR + '/app.jsx',
   output: {
     path: BUILD_DIR,
     filename: 'bundle.js'
@@ -18,6 +18,10 @@ var config = {
         loader: 'babel-loader'
       }
     ]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+    modules: [APP_DIR, 'node_modules']
   }
 };
 
