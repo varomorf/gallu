@@ -5,8 +5,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class ObjectivesList extends React.Component{
+var database = firebase.database();
 
+class ObjectivesList extends React.Component{
 
   constructor(props) {
     super(props);
@@ -14,23 +15,23 @@ class ObjectivesList extends React.Component{
     this.state = {
       objectives: []
     };
+  }
 
-    // Get a reference to the database service
-    var database = firebase.database();
-
+  componentDidMount() {
     database.ref('objectives').once('value').then(snapshot => {
-        this.state = {
+      this.setState({
           objectives: snapshot.val()
-        };
+        });
       }
     );
-
   }
+
   getObjectives() {
     return this.state.objectives.map((objective) =>
       <li className="objectivesList-objectiveEntry">{objective}</li>
     );
   }
+
   render() {
     return (
       <ul className="objectivesList">
@@ -38,6 +39,7 @@ class ObjectivesList extends React.Component{
       </ul>
     );
   }
+
 }
 
 ReactDOM.render(
